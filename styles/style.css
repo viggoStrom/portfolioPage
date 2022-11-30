@@ -1,0 +1,149 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-kerning: 10px;
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#site-header {
+    display: flex;
+    height: 3.85rem;
+
+    background-color: #f6f6f6;
+    border-bottom: .1rem solid rgb(87, 86, 88);
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5.3rem;
+    padding-left: 8.5rem;
+    align-items: center;
+    justify-items: center;
+
+    /* background-color: brown; */
+    font-size: 1.65rem;
+}
+
+.nav-item {
+    width: 8rem;
+    color: black;
+    text-decoration: none;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#homepageViggo {
+    position: absolute;
+    flex-flow: row-reverse;
+    z-index: -1;
+}
+
+#selected {
+    align-self: flex-end;
+}
+
+#selector {
+    box-sizing: border-box;
+    height: 0.4rem;
+    width: 7rem;
+    background-color: rgb(249, 118, 118);
+    margin-top: .6rem;
+    margin-bottom: -.1rem;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+#intro-text {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 35%;
+    margin-top: 14rem;
+    margin-left: 5.6rem;
+}
+
+/* "header" for welcome text*/
+#welcome-header {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: .8rem;
+}
+
+/* paragraph under the welcome text */
+#welcome-paragraph {
+    font-size: .95rem;
+    font-weight: 100;
+}
+
+#project-list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.project-listing {
+    display: flex;
+    background-color: rgba(130, 130, 130, 0.11);
+    flex-direction: row;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: .3rem;
+    width: 50rem;
+}
+
+@keyframes in {
+    from {
+        scale: 1.2;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+@keyframes out {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.2;
+    }
+}
+
+.project-img {
+    animation: in .5s;
+    border-radius: 2rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.project-img:hover {
+    animation: out .5s;
+    scale: 1.2;
+}
+
+.project-textbox {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+.project-h {
+    font-size: larger;
+    margin-top: 0;
+}
+.project-p {
+    margin: 0;
+}
+
+/* dumb idea: portfolio page, diagonally scrolling entries */
